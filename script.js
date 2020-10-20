@@ -1,7 +1,7 @@
 // Écrivez votre code JavaScript ici.
-let btn = document.querySelector("button");
-let ul = document.querySelector("ul");
-let input = document.querySelector("input");
+const btn = document.querySelector("button");
+const ul = document.querySelector("ul");
+const input = document.querySelector("input");
 
 const items = () => {
 
@@ -10,10 +10,10 @@ const items = () => {
   let btn1 = document.createElement("button");
   span = (document.createTextNode(input.value));
   li.appendChild(span);
+  li.appendChild(btn1);
   btn1.onclick = function() {
     ul.removeChild(li);
   };
-  li.appendChild(btn1);
   btn1 = (btn1.innerHTML = "Delete");
   ul.appendChild(li);
   input.value = "";
